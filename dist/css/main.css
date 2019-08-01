@@ -62,6 +62,88 @@ h5 {
   padding: 0 2rem;
   overflow: hidden; }
 
+.category {
+  display: inline-block;
+  color: #fff;
+  font-size: .55rem;
+  text-transform: uppercase;
+  padding: .4rem .6rem;
+  border-radius: 50%;
+  margin-bottom: .5rem; }
+  .category--sports {
+    background: var(--sports-color); }
+  .category--ent {
+    background: var(--ent-color); }
+  .category--tech {
+    background: var(--tech-color); }
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: #fff;
+  padding: .5rem 1.5rem; }
+  .btn--light {
+    background: var(--light-color); }
+  .btn--primary {
+    background: var(--primary-color); }
+  .btn--secondary {
+    background: var(--secondary-color); }
+  .btn--block {
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .btn:hover {
+    opacity: .9; }
+
+.card {
+  background: #fff;
+  padding: 1rem; }
+
+.bg-dark {
+  background: var(--dark-color);
+  color: #fff; }
+
+.bg-primary {
+  background: var(--primary-color);
+  color: #fff; }
+
+.bg-secondary {
+  background: var(--secondary-color);
+  color: #fff; }
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: #fff; }
+
+.py-1 {
+  padding: 1.5rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.p-1 {
+  padding: 1.5rem; }
+
+.p-2 {
+  padding: 2rem; }
+
+.p-3 {
+  padding: 3rem; }
+
 /* Navigation */
 .main-nav {
   background: #fff;
@@ -92,3 +174,41 @@ h5 {
     .main-nav .social i {
       color: #777;
       margin-right: .5rem; }
+
+.showcase {
+  color: #fff;
+  background: var(--dark-color);
+  padding: 2rem;
+  position: relative; }
+  .showcase:before {
+    content: "";
+    background: url("../../img/featured.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .4; }
+  .showcase__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh; }
+  .showcase__content {
+    z-index: 1; }
+  .showcase__paragraph {
+    margin-bottom: 1rem; }
+
+/* Home Articles */
+.home-articles__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; }
+  .home-articles__container > *:first-child,
+  .home-articles__container > *:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    grid-column: span 2; }
