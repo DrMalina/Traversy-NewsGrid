@@ -60,7 +60,7 @@ img {
     font-size: .55rem;
     text-transform: uppercase;
     padding: .4rem .6rem;
-    border-radius: 50%;
+    border-radius: 5%;
     margin-bottom: .5rem;
 
     &--sports { background: var(--sports-color)};
@@ -133,6 +133,10 @@ img {
 .p-1 { padding: 1.5rem }
 .p-2 { padding: 2rem }
 .p-3 { padding: 3rem }
+
+.l-heading {
+    font-size: 3rem;
+}
 
 .list {
     list-style: none;
@@ -244,6 +248,18 @@ img {
     }
 }
 
+.meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: .5rem;
+
+    .category {
+        margin-top: .4rem;
+    } 
+}
+
 /* Footer */
 .footer {
     background: var(--dark-color);
@@ -306,3 +322,99 @@ img {
     }
 }
 
+.categories {
+    .list li {
+        padding: .5rem 0;
+        border-bottom: #555 dotted 1px;
+        width: 90%;
+    }
+}
+
+
+/* MEDIA QUERIES */ 
+
+@media only screen and (max-width: 768px) {
+    .social {
+        display: none;
+    }
+
+    .main-nav {
+        .container {
+            grid-template-columns: 1fr;
+            grid-gap: 1.2rem;
+        }
+
+        .list li a {
+            padding: .5rem;
+        }
+
+        .list,
+        .logo {
+            justify-self: center;
+        }
+    }
+
+    .home-articles {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+
+            & > *:first-child,
+            & > *:last-child {
+                grid-template-columns: 1fr;
+                grid-column: span 1;
+            }
+        }
+
+    }
+
+} 
+
+@media only screen and (max-width: 600px) {
+    /* Stack Grid Items 1 col */
+    .showcase {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .home-articles {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .footer {
+        &__container {
+            grid-template-columns: 1fr;
+            
+            & > *:last-child {
+               grid-column: 1 / span 1;
+            }
+
+            & > * {
+                border-bottom: #444 dotted 1px;
+                padding-bottom: 1rem;
+            }
+
+            & > *:last-child,
+            & > *:nth-child(3),
+            & > *:nth-child(4) {
+                border: none;
+            }
+        }
+    }
+
+    .page-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+
+        &> *:first-child {
+            grid-row: 1;
+        }
+    }
+
+    .l-heading {
+        font-size: 2rem;
+    }
+
+}
